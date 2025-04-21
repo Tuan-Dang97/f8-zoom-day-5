@@ -98,7 +98,7 @@ li {
     margin-bottom: 5px;
 }
 
-/* Menu CSS */
+/* Menu Enhanced CSS */
 .menu-container {
     display: flex;
     color: #fff;
@@ -119,6 +119,7 @@ li {
     line-height: 76px;
     align-items: center;
     margin: 0;
+    position: relative;
 }
 
 .item-link {
@@ -127,12 +128,33 @@ li {
     font-weight: 600;
     display: flex;
     height: 100%;
+    width: 100%;
 }
 
-.item.active > .item-link {
+.item:hover {
     background-color: #fff;
+}
+
+.item:hover .item-link {
     color: #000;
-    padding: 0 25px;
+}
+
+.item:active {
+    transform: scale(0.98);
+}
+
+.item:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    height: 30px; /* Chiều cao của vách ngăn */
+    width: 1px;
+    background-color: rgba(255, 255, 255, 0.5); /* Màu trắng với độ trong suốt */
+}
+
+.item::before {
+    content: "\1F4C4";
+    margin-right: 8px;
 }
 
 /* Form */
