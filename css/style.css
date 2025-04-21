@@ -149,7 +149,12 @@ li {
     right: 0;
     height: 28px; /* Chiều cao của vách ngăn */
     width: 1px;
-    background-color: rgba(255, 255, 255, 0.5); /* Màu trắng với độ trong suốt */
+    background-color: rgba(
+        255,
+        255,
+        255,
+        0.5
+    ); /* Màu trắng với độ trong suốt */
 }
 
 .item::before {
@@ -164,6 +169,10 @@ li {
     background-color: white;
     border-radius: 10px;
     padding: 50px;
+}
+
+.form-container:focus-within {
+    border: 1px solid #3e5cca;
 }
 
 .form-group {
@@ -242,4 +251,30 @@ textarea:focus {
     border-radius: 5px;
     font-size: 16px;
     font-weight: 600;
+}
+
+.btn-register:hover {
+    background-color: green;
+}
+
+.btn-register:active {
+    transform: scale(0.98);
+}
+
+input:invalid{
+    border: 1px solid red;
+}
+
+input:required:invalid:not(:placeholder-shown) {
+    border-color: #ff3860; 
+}
+
+input:required:invalid:placeholder-shown {
+    border-color: #ccc;
+}
+
+.form-group.required label::after {
+    content: "*";
+    color: red;
+    margin-left: 3px;
 }
