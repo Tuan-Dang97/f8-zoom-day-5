@@ -147,7 +147,7 @@ li {
     content: "";
     position: absolute;
     right: 0;
-    height: 30px; /* Chiều cao của vách ngăn */
+    height: 28px; /* Chiều cao của vách ngăn */
     width: 1px;
     background-color: rgba(255, 255, 255, 0.5); /* Màu trắng với độ trong suốt */
 }
